@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compiler Design Tutorial</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>📘 Compiler Design - Learn Interactively</h1>
+    <p>Explore the phases of a compiler with examples, diagrams, and code</p>
+  </header>
+
+  <main>
+    <section>
+      <h2 onclick="toggleSection('intro')">📘 What is a Compiler?</h2>
+      <div id="intro" class="content">
+        <p>A compiler converts high-level source code into machine code understood by computers.</p>
+        <img src="images/compiler-architecture.png" alt="Compiler Architecture Diagram" />
+      </div>
+    </section>
+
+    <section>
+      <h2 onclick="toggleSection('phases')">🧩 Compiler Phases</h2>
+      <div id="phases" class="content">
+        <ul>
+          <li><strong>Lexical Analysis:</strong> Tokenizes the source code</li>
+          <li><strong>Syntax Analysis:</strong> Builds the parse tree</li>
+          <li><strong>Semantic Analysis:</strong> Validates meaning</li>
+          <li><strong>Intermediate Code Generation:</strong> Converts to IR</li>
+          <li><strong>Code Optimization:</strong> Improves performance</li>
+          <li><strong>Code Generation:</strong> Outputs target code</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 onclick="toggleSection('examples')">🧪 Examples and Code</h2>
+      <div id="examples" class="content">
+        <h3>Example: Tokenization</h3>
+        <pre><code>
+int a = 5 + 3;
+↓
+Tokens: [int] [a] [=] [5] [+] [3] [;]
+        </code></pre>
+
+        <h3>Example: Parse Tree</h3>
+        <pre><code>
+      +
+     / \
+    5   3
+        </code></pre>
+
+        <button onclick="showTip()">💡 Show Tip</button>
+        <p id="tip" class="tip">Tip: Lexical analyzers often use finite automata for token generation.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 onclick="toggleSection('resources')">🔗 External Resources</h2>
+      <div id="resources" class="content">
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Compiler" target="_blank">Wikipedia - Compiler</a></li>
+          <li><a href="https://www.geeksforgeeks.org/compiler-design-tutorials/" target="_blank">GFG Compiler Design</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 onclick="toggleSection('feedback')">📝 Feedback</h2>
+      <div id="feedback" class="content">
+        <form onsubmit="return submitFeedback()">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="comments">Your Comments:</label>
+          <textarea id="comments" name="comments" rows="4" required></textarea>
+
+          <label for="rating">Rating:</label>
+          <select id="rating" name="rating" required>
+            <option value="">Choose one</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+          </select>
+
+          <button type="submit">Submit Feedback</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>📚 Created as part of Web & Compiler Design Learning | © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

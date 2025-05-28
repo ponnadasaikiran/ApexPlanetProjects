@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Contact Form with To-Do List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <h1>Interactive Contact Form with To-Do List</h1>
+    <ul>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#todo">To-Do</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="contact-form" id="contact">
+      <h2>Contact Us</h2>
+      <form id="form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+        <div class="error" id="error"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="todo-container" id="todo">
+      <h2>To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Add a new task..." />
+      <button onclick="addTask()">Add</button>
+      <ul class="todo-list" id="todoList"></ul>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

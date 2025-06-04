@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Web Features</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Image Carousel</h1>
+  </header>
+
+  <main>
+    <section id="responsive-section">
+      <h2>Responsive Design</h2>
+      <p>This section adjusts layout and style based on screen size.</p>
+    </section>
+
+    <section id="carousel-section">
+      <h2>Image Carousel</h2>
+      <div class="carousel">
+        <img id="carousel-image" src="images/img1.jpg" alt="Carousel Image" />
+        <div class="controls">
+          <button onclick="prevImage()">Prev</button>
+          <button onclick="nextImage()">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="api-section">
+      <h2>Joke of the Moment</h2>
+      <button onclick="fetchJoke()">Get Joke</button>
+      <p id="joke-display"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

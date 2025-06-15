@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Web Project</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- 🔹 Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#todo">To-Do List</a></li>
+      <li><a href="#products">Product Listing</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🌟 PORTFOLIO SECTION -->
+  <section id="portfolio">
+    <h1>👨‍💻 My Portfolio</h1>
+
+    <div class="section about">
+      <h2>About Me</h2>
+      <p>I am a front-end web developer with a passion for creating engaging, responsive websites and apps using HTML, CSS, and JavaScript.</p>
+    </div>
+
+    <div class="section skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+        <li>Responsive Design</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </div>
+
+    <div class="section experience">
+      <h2>Experience & Education</h2>
+      <div class="card">
+        <h3>🌐 Web Development Intern - Apex Planet Software Pvt Ltd</h3>
+        <p>Developed responsive portfolio, to-do list, and product pages using front-end tech stack.</p>
+      </div>
+      <div class="card">
+        <h3>🎓 B.Tech in Computer Science</h3>
+        <p>XYZ University | 2021 - 2025</p>
+      </div>
+    </div>
+
+    <div class="section projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>To-Do List App</strong> – Add/edit/delete tasks with local storage support</li>
+        <li><strong>Product Listing</strong> – Filter/sort products by category and price</li>
+        <li><strong>Portfolio</strong> – Personal showcase with resume and contact info</li>
+      </ul>
+    </div>
+
+    <div class="section contact">
+      <h2>Contact</h2>
+      <p><i class="fas fa-envelope"></i> email@example.com</p>
+      <p><i class="fab fa-linkedin"></i> linkedin.com/in/yourprofile</p>
+      <p><i class="fab fa-github"></i> github.com/yourusername</p>
+    </div>
+
+    <a href="resume.pdf" download class="resume-btn">📄 Download My Resume</a>
+  </section>
+
+  <!-- ✅ TO-DO LIST SECTION -->
+  <section id="todo">
+    <h2>📝 To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter a new task" />
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+  </section>
+
+  <!-- ✅ PRODUCT LISTING SECTION -->
+  <section id="products">
+    <h2>🛍️ Product Listing</h2>
+    <select id="filter" onchange="filterProducts()">
+      <option value="all">All</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Clothing">Clothing</option>
+    </select>
+    <select id="sort" onchange="sortProducts()">
+      <option value="price">Sort by Price</option>
+      <option value="rating">Sort by Rating</option>
+    </select>
+    <div id="productList" class="product-grid"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookNook | Browse Books</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">📚 BookNook</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="#" id="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">&#9776;</div>
+  </header>
+
+  <section class="filters">
+    <input type="text" id="searchInput" placeholder="Search books..." />
+    <select id="genreFilter">
+      <option value="">All Genres</option>
+      <option value="Fiction">Fiction</option>
+      <option value="Dystopian">Dystopian</option>
+      <option value="Self-help">Self-help</option>
+      <option value="Classic">Classic</option>
+      <option value="Finance">Finance</option>
+      <option value="Spirituality">Spirituality</option>
+      <option value="History">History</option>
+      <option value="Biography">Biography</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Science Fiction">Science Fiction</option>
+      <option value="Business">Business</option>
+      <option value="Psychology">Psychology</option>
+    </select>
+  </section>
+
+  <section class="books-grid" id="booksContainer">
+    <!-- Books will be rendered dynamically -->
+  </section>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="cart-modal hidden">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart">✖</button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-footer">
+      <p>Total Items: <span id="totalItems">0</span></p>
+      <p>Total: ₹<span id="totalAmount">0</span></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 BookNook. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
